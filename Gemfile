@@ -7,20 +7,35 @@ gem 'rails', '4.0.2'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+group :assets do
+  # Use SCSS for stylesheets
+  gem 'sass-rails'
+  # CSS Authoring Framework
+  gem 'compass-rails'
+  # Twitter's toolkit for kickstarting CSS
+  gem 'bootstrap-sass'
+end
+
+
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
+# gem 'coffee-rails', '~> 4.0.0'
+gem 'iced-rails'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+
+# Use Simple Form for forms
+gem 'simple_form'
+
+# Use Slim template engine for templates
+gem 'slim-rails'
 
 # Turbolinks makes following links in your web application faster.
 # Read more: https://github.com/rails/turbolinks
@@ -31,11 +46,15 @@ gem 'jbuilder', '~> 1.2'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
+  # gem 'sdoc', require: false
+  gem 'yard-rails'
 end
 
 # Unit tests
-gem 'rspec' , group: [:development, :test]
+group :test do
+  gem 'rspec-rails'
+  gem 'factory_girl'
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
