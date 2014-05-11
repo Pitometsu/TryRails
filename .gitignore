@@ -22,3 +22,6 @@
 # Local and auto-generated files
 /Gemfile.lock
 /Gemfile.local
+
+# Dynamic secret key
+.secret
